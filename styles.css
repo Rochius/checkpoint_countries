@@ -1,0 +1,161 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(255, 255, 255);
+}
+
+body{
+    background-color: #151E21;
+}
+
+.header_container{
+    background-color:  #00cae033;
+    text-align: center;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.129);
+}
+
+.header_container h1{
+    width: calc(100% - 6rem);
+    margin: auto;
+    color: rgb(255, 255, 255);
+}
+
+.cards_container{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card{
+	/* box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.3); */
+	background: hsla(186, 100%, 44%, 0.5);
+    width: calc(100% - 6rem);
+    height: calc(60vh - 3rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    border-radius: 1rem;
+}
+
+.card_content{
+    margin: auto;
+    width: calc(100% - 3rem);
+    height: 80%;
+    overflow: hidden;
+    overflow: overlay
+}
+
+.card_content::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+.card_content::-webkit-scrollbar-track {
+    background: hsla(186, 100%, 44%, 0.283);        /* color of the tracking area */
+  }
+
+.card_content::-webkit-scrollbar-thumb {
+    background-color: hsla(186, 100%, 44%, 0.442);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid  hsla(186, 100%, 44%, 0.283);  /* creates padding around scroll thumb */
+  }
+
+.card_content h2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.card_content ul{
+    height: auto;
+    margin-top: 1rem;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card_content ul li:last-child:hover{
+    transform: scale(1.05);
+    text-shadow: 1px 1px 1px gray;
+    font-size: larger;
+    transition: 300ms;
+    color: rgb(255, 255, 255);
+}
+
+.card_content ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.card_image{
+    background-color: palevioletred;
+    height: 100%;
+    overflow: hidden;
+    border-end-end-radius: 1rem;
+    border-start-end-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card_image img{
+    text-align: center;
+    height: 100%;
+    left: 0%;
+}
+
+.list_icon{
+    width: 30px;
+    margin-right: 0.5rem;
+}
+
+.icon2{
+    height: 30px;
+}
+
+.times_list{
+    display: flex;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .cards_container{
+        display: block;
+        height: 50vh;
+    }
+    .card{
+        height: calc(100% - 3rem);
+        margin: 1.5rem 3rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .cards_container{
+        height: 70vh;
+    }
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .card_image{
+        height: 50%;
+        border-radius: 0;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        align-items: center;
+    }
+
+    .card_image img{
+        width: 100%;
+        height: auto;
+    }
+}
